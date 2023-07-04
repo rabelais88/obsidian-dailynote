@@ -1,0 +1,60 @@
+{
+  "devDependencies": {
+    "@parcel/config-default": "^2.9.1",
+    "@types/d3-array": "^3.0.5",
+    "@types/d3-axis": "^3.0.2",
+    "@types/d3-force": "^3.0.4",
+    "@types/d3-scale": "^4.0.3",
+    "@types/d3-scale-chromatic": "^3.0.0",
+    "@types/d3-selection": "^3.0.5",
+    "@types/d3-time": "^3.0.0",
+    "@types/lodash": "^4.14.195",
+    "@types/luxon": "^3.3.0",
+    "dotenv": "^16.1.3",
+    "luxon": "^3.3.0",
+    "parcel": "^2.9.1",
+    "parcel-reporter-static-files-copy": "^1.5.0",
+    "prettier": "^2.8.8"
+  },
+  "targets": {
+    "daily-summary": {
+      "source": "src/daily-summary/src/view.ts",
+      "distDir": "dist/daily-summary"
+    },
+    "daily-tasks": {
+      "source": "src/daily-tasks/src/view.ts",
+      "distDir": "dist/daily-tasks-alt"
+    },
+    "daily-timeline": {
+      "source": "src/daily-timeline/src/view.ts",
+      "distDir": "dist/daily-timeline"
+    }
+  },
+  "staticFiles": [
+    {
+      "staticPath": "src/daily-tasks/bundle",
+      "distDir": "dist/daily-tasks-alt"
+    },
+    {
+      "staticPath": "src/daily-timeline/bundle",
+      "distDir": "dist/daily-timeline"
+    }
+  ],
+  "scripts": {
+    "build": "parcel build",
+    "test": "jest",
+    "check": "tsc --noEmit",
+    "postbuild": "node ./post-build.js"
+  },
+  "dependencies": {
+    "d3-array": "^3.2.4",
+    "d3-axis": "^3.0.0",
+    "d3-force": "^3.0.0",
+    "d3-scale": "^4.0.2",
+    "d3-scale-chromatic": "^3.0.0",
+    "d3-selection": "^3.0.0",
+    "d3-time": "^3.1.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4"
+  }
+}

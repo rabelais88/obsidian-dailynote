@@ -1,0 +1,108 @@
+/* .table-schedule {
+  width: 100%;
+  font-size: 12px;
+}
+
+.table-schedule *[data-now='true'] td {
+  background-color: var(--text-highlight-bg) !important;
+}
+
+.table-schedule .cell-time {
+  width: 5em;
+  text-align: center;
+}
+
+.table-schedule .cell-content {
+  width: calc(100% - 15em);
+  max-width: calc(100% - 15em);
+}
+
+.table-schedule .cell-content[data-content='[[work]]'],
+.cell-content[data-content='[[study]]'] {
+  font-weight: bold;
+  color: var(--text-error);
+}
+
+.table-schedule tr[data-content='[[travel]]'] * {
+  border: none;
+  color: gray;
+  position: relative;
+}
+
+.table-content .cell-content[data-content='[[travel]]'] {
+  text-align: center;
+}
+
+.table-schedule tr[data-now='true'] .cell-content::before {
+  content: '👉';
+}
+
+.table-schedule .cell-duration {
+  text-align: right;
+  width: 6em;
+} */
+
+svg.timeline .bg {
+  fill: lightgray;
+}
+/* svg.timeline .time-item rect {
+  fill: gray;
+} */
+@keyframes highlight {
+  50% {
+    fill: var(--text-highlight-bg);
+  }
+}
+svg.timeline .time-item[data-now='true'] rect {
+  animation: highlight 3s infinite;
+  transition: fill 3s ease;
+}
+
+svg.timeline .time-item text.task-name {
+  fill: white;
+  font-size: 12px;
+  stroke: black;
+  stroke-width: 1px;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  paint-order: stroke fill;
+}
+
+svg.timeline .time-item line {
+  stroke: black;
+  stroke-width: 1px;
+}
+
+svg.timeline .axis .tick line {
+  opacity: 0.2;
+}
+
+svg.timeline .time-item text.time-label {
+  font-size: 11px;
+}
+
+svg.timeline .axis .domain {
+  display: none;
+}
+
+svg.timeline .clock-hand line {
+  stroke: red;
+  stroke-width: 1px;
+}
+
+svg.timeline .clock-hand text {
+  fill: red;
+}
+
+svg.timeline .plan line {
+  stroke: white;
+  stroke-width: 1px;
+}
+
+svg.timeline .plan text {
+  font-size: 11px;
+  fill: black;
+  stroke: white;
+  stroke-width: 1px;
+  paint-order: stroke fill;
+}
